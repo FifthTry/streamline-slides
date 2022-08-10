@@ -1,1 +1,1327 @@
--- ds.page: hello
+-- import: fifthtry.github.io/streamline-slides/assets
+-- import: fifthtry.github.io/package-doc/doc as pd
+-- import: fifthtry.github.io/package-doc/typography as tf
+-- import: fpm
+-- import: fifthtry.github.io/slides as slide
+
+-- integer total: 1
+
+-- boolean show-full-screen: false
+
+-- integer slide-no: 1
+
+-- boolean is-mobile: false
+
+-- is-mobile: true
+if: $ftd.device == mobile
+
+
+
+
+
+-- string right-body:
+
+Add body here...
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+- sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+
+
+
+
+-- ft.page: Streamline Presentation
+
+Simple Light is a light theme for presentation.
+
+-- pd.package: Simple Light Slides
+name: fifthtry.github.io/streamline-slides
+
+To use Simple Light on your web package, add below into `FPM.ftd` file:
+
+-- cb.code:
+lang: ftd
+
+\-- fpm.dependency: fifthtry.github.io/streamline-slides
+\-- fpm.auto-import: fifthtry.github.io/streamline-slides
+
+-- tf.markdown:
+
+Once you add above lines into your web package, add `simple-light-slides` into 
+your `.ftd` file:
+
+-- cb.code: Basic usage example:
+lang: ftd
+
+\-- slide.presentation:
+total: 11
+embed: true
+
+
+-- ft.page: `slides` and it's Usage
+
+A blank presentation slides. These slides can be used for web presentations.
+
+
+
+
+
+-- pd.package: `slides` and it's Usage
+name: fifthtry.github.io/slides
+
+To use `slides` on web presentation, add below into `FPM.ftd` file:
+
+-- cb.code:
+lang: ftd
+
+\-- fpm.dependency: fifthtry.github.io/slides as slides
+\-- fpm.auto-import: slides
+
+
+-- pd.hidden-code: How to use slides: `copy` below code into `FTD` package
+
+\-- slides.presentation:
+total: 11
+embed: true
+
+\-- slides.main-point: Add slide title here
+number: 1
+
+\-- slides.one-column-text: Add slide title here
+number: 2
+
+Add body here...
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+- sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+
+\-- slides.section-header: Add section header here
+number: 3
+
+\-- slides.section-title-and-description: Add slide title here
+number: 4
+subtitle: Add subtitle here
+
+Add body here...
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+- sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+
+
+\-- slides.title-only: Add slide title here
+number: 5
+
+\-- slides.title-and-2-columns: Add slide title here
+number: 6
+
+\--- left-column:
+
+Add body here...
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+- sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+
+\--- right-column:
+
+Add body here...
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+- sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+
+
+\-- slides.title-and-body: Add slide title here
+number: 7
+
+Add body here...
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+- sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+
+\-- slides.title-slide: Add slide title here
+number: 8
+subtitle: Add subtitle here
+
+\-- slides.big-number: Add big caption here
+number: 9
+subtitle: Add subtitle here
+
+\-- slides.caption: Add caption here
+number: 10
+
+\-- slides.blank: 
+number: 11
+
+
+
+
+
+-- tf.h2: Working demo:
+
+Press `CTRL+f` to see full screen mode. Press `left` / `right` arrow kyes to 
+navigate to left OR right slide.
+
+
+
+
+
+-- slide.presentation:
+bg-color: $fpm.color.main.text-strong
+overlay-bg-color: $fpm.color.main.background.step-1
+embed: true
+current: 1
+
+--- title-slide: Add slide title here
+subtitle: Add subtitle here
+
+--- section-header: Add section header here
+
+--- title-and-body: Add slide title here
+
+Add body here...
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+- sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+- Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+
+--- title-and-2-columns: Add slide title here
+left-image: $assets.files.image-placeholder.png
+right-body: $right-body
+
+--- title-only: Add slide title here
+image: $assets.files.image-placeholder.png
+
+
+--- one-column-text: Add slide title here
+image: $assets.files.image-placeholder.png
+
+orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+nostrud exercitation ullamco laboris nisi ut orem ipsum dolor sit amet, 
+consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+laboris nisi ut orem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+
+--- main-point: Add slide title here
+
+--- section-title-and-description: Add slide title here
+subtitle: Add subtitle here
+image: $assets.files.image-placeholder.png
+
+--- caption: Add caption here
+image: $assets.files.image-placeholder.png
+
+
+--- big-number: Add big caption here
+subtitle: Add subtitle here
+
+--- blank: 
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column title-slide:
+caption title:
+string subtitle:
+optional integer move-top:
+optional integer move-bottom:
+optional boolean move-center: true
+optional integer number:
+if: $PARENT.current == $SIBLING-INDEX
+width: fill
+height: fill
+
+--- ftd.row:
+height: fill
+width: fill
+
+--- ftd.column:
+width: fill
+id: description
+align: center
+
+--- ftd.column:
+width: fill
+align: center
+spacing: 36
+max-width: 1200
+
+--- ftd.text: $title
+role: $fpm.type.heading-hero
+color: $fpm.color.main.background.step-1
+align: center
+text-align: center
+
+--- ftd.text:
+text: $subtitle
+role: $fpm.type.heading-medium
+color: $fpm.color.main.background.step-1
+align: center
+
+
+
+
+
+
+
+
+
+
+-- ftd.row section-header:
+caption title:
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: false
+optional string font-size:
+optional integer number:
+if: $PARENT.current == $SIBLING-INDEX
+width: fill
+height: fill
+
+
+--- ftd.column:
+if: not $is-mobile
+anchor: parent
+background-color: $fpm.color.main.custom.three
+height if not $slide.show-full-screen: 583
+width if not $slide.show-full-screen: 1108
+height if  $slide.show-full-screen:  970
+width if $slide.show-full-screen: 1674
+top: -97
+top if $slide.show-full-screen: -1
+left: -104
+z-index: 0
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $is-mobile
+anchor: parent
+background-color: $fpm.color.main.custom.three
+height if not $slide.show-full-screen: 500
+width if not $slide.show-full-screen: 777
+height if  $slide.show-full-screen:  500
+width if $slide.show-full-screen: 973
+top: -25
+top if $slide.show-full-screen: 4
+left: -106
+left if not $slide.show-full-screen: -7
+z-index: 0
+
+
+--- container: ftd.main
+
+--- ftd.column:
+width: fill
+id: description
+align: center
+z-index: 1000
+
+--- ftd.column:
+width: fill
+align: center
+max-width: 1200
+
+--- ftd.column:
+align: center
+spacing: 32
+id: change
+
+--- ftd.row:
+width: 204
+height: 8
+background-color: $fpm.color.main.background.step-1
+
+--- container: change
+
+
+--- ftd.text: $title
+role: $fpm.type.heading-hero
+color: $fpm.color.main.background.step-1
+width: fill
+align: center
+
+
+
+
+
+
+
+-- ftd.column title-and-body:
+caption title:
+body body:
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: true
+string font-size: regular
+optional integer number:
+if: $PARENT.current == $SIBLING-INDEX
+width: fill
+height: fill
+
+--- ftd.row:
+height: fill
+width: fill
+
+--- ftd.column:
+width: fill
+id: description
+padding-top if not $move-center: 36
+align if $move-center: center
+
+--- ftd.column:
+align: center
+max-width: 1200
+
+--- ftd.column:
+align: center
+id: change
+
+
+--- ftd.row:
+width: fill
+id: border-container
+margin-bottom: 36
+
+--- ftd.row:
+width: 104
+height: 8
+background-color: $fpm.color.main.custom.three
+
+--- container: border-container
+
+--- ftd.row:
+width: 104
+height: 8
+background-color: $fpm.color.main.custom.one
+
+--- container: change
+
+
+
+--- ftd.text: $title
+role: $fpm.type.heading-hero
+color: $fpm.color.main.background.step-1
+width: fill
+
+--- ftd.text:
+if: $font-size == small
+text: $body
+color: $fpm.color.main.background.step-1
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+role: $fpm.type.fine-print
+
+--- ftd.text:
+if: $font-size == regular
+text: $body
+role: $fpm.type.copy-tight
+color: $fpm.color.main.background.step-1
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
+--- ftd.text:
+if: $font-size == medium
+text: $body
+role: $fpm.type.copy-large
+color: $fpm.color.main.background.step-1
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
+--- ftd.text:
+if: $font-size == large
+text: $body
+role: $fpm.type.label-big
+color: $fpm.color.main.background.step-1
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column title-and-2-columns:
+caption title:
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: true
+string font-size: small
+optional integer number:
+optional body left-body:
+optional ftd.image-src left-image:
+optional body right-body:
+optional ftd.image-src right-image:  
+if: $PARENT.current == $SIBLING-INDEX
+width: fill
+height: fill
+
+--- ftd.row:
+height: fill
+width: fill
+
+--- ftd.column:
+width: fill
+padding-top if not $move-center: 24
+align if $move-center: center
+
+--- ftd.column:
+width: fill
+id: description
+spacing: 36
+align: center
+max-width: 1200
+
+--- ftd.column:
+width: fill
+align: center
+id: two-column
+max-width: 1200
+
+
+--- ftd.row:
+width: fill
+id: border-container
+margin-bottom: 36
+
+--- ftd.row:
+width: 104
+height: 8
+background-color: $fpm.color.main.custom.three
+
+--- container: border-container
+
+--- ftd.row:
+width: 104
+height: 8
+background-color: $fpm.color.main.custom.one
+
+--- container: two-column
+
+--- ftd.text: $title
+role: $fpm.type.heading-hero
+color: $fpm.color.main.background.step-1
+width: fill
+
+--- container: description
+
+
+--- ftd.row: 
+id: text-contain
+width: fill
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+spacing: 36
+
+--- ftd.column:
+width: fill
+id: left
+
+--- ftd.row:
+if: $left-body is not null
+width: fill
+
+--- ftd.text:
+if: $font-size == small
+text: $left-body
+color: $fpm.color.main.background.step-1
+width: fill
+role: $fpm.type.fine-print
+
+--- ftd.text:
+if: $font-size == regular
+text: $left-body
+role: $fpm.type.copy-tight
+color: $fpm.color.main.background.step-1
+width: fill
+
+--- ftd.text:
+if: $font-size == medium
+text: $left-body
+role: $fpm.type.copy-large
+color: $fpm.color.main.background.step-1
+width: fill
+
+--- ftd.text:
+if: $font-size == large
+text: $left-body
+role: $fpm.type.label-big
+color: $fpm.color.main.background.step-1
+width: fill
+
+--- container: left
+
+--- ftd.image:
+if: $left-body is null
+src: $left-image
+width: fill
+height: auto
+
+--- container: text-contain
+
+
+--- ftd.row:
+if: $right-body is not null
+width: fill
+
+--- ftd.text:
+if: $font-size == small
+text: $right-body
+color: $fpm.color.main.background.step-1
+width: fill
+role: $fpm.type.fine-print
+
+--- ftd.text:
+if: $font-size == regular
+text: $right-body
+role: $fpm.type.copy-tight
+color: $fpm.color.main.background.step-1
+width: fill
+
+--- ftd.text:
+if: $font-size == medium
+text: $right-body
+role: $fpm.type.copy-large
+color: $fpm.color.main.background.step-1
+width: fill
+
+--- ftd.text:
+if: $font-size == large
+text: $right-body
+role: $fpm.type.label-big
+color: $fpm.color.main.background.step-1
+width: fill
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column left-column:
+optional body body:
+optional ftd.image-src image-left: 
+width: fill
+margin-right if not $is-mobile: 36
+margin-bottom if $is-mobile: 24
+
+--- ftd.text:
+if: $body is not null
+text: $body
+role: $fpm.type.copy-large
+color: $fpm.color.main.background.step-1
+width: fill
+
+--- ftd.image:
+if: $body is null
+src: $image-left
+width: fill
+height: auto
+
+
+
+
+
+
+
+
+
+-- ftd.column right-column:
+optional body body:
+optional ftd.image-src image-right: 
+width: fill
+
+
+--- ftd.text:
+if: $body is not null
+text: $body
+role: $fpm.type.copy-large
+color: $fpm.color.main.background.step-1
+width: fill
+
+--- ftd.image:
+if: $body is null
+src: $image-right
+width: fill
+height: auto
+
+
+
+
+
+
+
+
+
+
+-- ftd.column title-only:
+caption title:
+optional ftd.image-src image:
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: true
+optional string font-size:
+optional integer number:
+boolean center-image: false
+if: $PARENT.current == $SIBLING-INDEX
+width: fill
+height: fill
+
+--- ftd.row:
+id: main
+height: fill
+width: fill
+padding-top if $show-full-screen: $fpm.space.space-6
+margin-top if not $show-full-screen: -24
+
+--- ftd.column:
+width: fill
+padding-top if not $move-center: 24
+align if $move-center: center
+id: description
+
+
+--- ftd.column:
+width: fill
+height: fill
+align: center
+max-width: 1200 
+max-width if $is-mobile: fill 
+id: change
+
+--- ftd.column:
+align: center
+id: change
+
+
+
+
+--- ftd.row:
+width: fill
+id: border-container
+margin-bottom: 36
+
+
+--- ftd.row:
+width: 104
+height: 8
+background-color: $fpm.color.main.custom.three
+
+--- container: border-container
+
+--- ftd.row:
+width: 104
+height: 8
+background-color: $fpm.color.main.custom.one
+
+--- container: change
+
+
+--- ftd.text: $title
+role: $fpm.type.heading-hero
+color: $fpm.color.main.background.step-1
+width: fill
+margin-bottom: 24
+
+--- ftd.image:
+if: $image is not null
+src: $image
+width: auto
+align if $center-image: center
+max-width: auto
+height: auto
+max-height if not $is-mobile: 400
+max-height if $is-mobile: 320
+
+
+
+
+
+
+
+
+
+
+-- ftd.column one-column-text:
+caption title:
+body body:
+optional ftd.image-src image:
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: true
+optional string font-size: regular
+optional integer number:
+if: $PARENT.current == $SIBLING-INDEX
+width: fill
+height: fill
+
+--- ftd.row:
+height: fill
+width: fill
+
+--- ftd.column:
+width: fill
+align: center
+
+--- ftd.row:
+height: fill
+width: fill
+id: description
+align: center
+spacing: 36
+max-width: 1200
+
+--- ftd.column:
+height: fill
+width: fill
+align: top
+id: change
+
+--- ftd.row:
+width: fill
+id: border-container
+margin-bottom: 36
+
+--- ftd.row:
+width: 104
+height: 8
+background-color: $fpm.color.main.custom.three
+
+--- container: border-container
+
+--- ftd.row:
+width: 104
+height: 8
+background-color: $fpm.color.main.custom.one
+
+--- container: change
+
+--- ftd.text: $title
+role: $fpm.type.heading-hero
+color: $fpm.color.main.background.step-1
+
+--- ftd.text:
+if: $font-size == small
+text: $body
+color: $fpm.color.main.background.step-1
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+role: $fpm.type.fine-print
+
+--- ftd.text:
+if: $font-size == regular
+text: $body
+role: $fpm.type.copy-tight
+color: $fpm.color.main.background.step-1
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
+--- ftd.text:
+if: $font-size == medium
+text: $body
+role: $fpm.type.copy-large
+color: $fpm.color.main.background.step-1
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
+--- ftd.text:
+if: $font-size == large
+text: $body
+role: $fpm.type.label-big
+color: $fpm.color.main.background.step-1
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
+--- container: description
+
+
+--- ftd.column:
+width: fill
+align: top
+
+--- ftd.image:
+if: $image is not null
+src: $image
+width: fill
+height: fill
+
+
+
+
+
+
+
+
+
+
+-- ftd.row main-point:
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: true
+optional string font-size:
+optional integer number: 
+if: $PARENT.current == $SIBLING-INDEX
+caption title:
+width: fill
+height: fill
+
+
+--- ftd.column:
+if: not $is-mobile
+anchor: parent
+background-color: $fpm.color.main.custom.one
+height if not $slide.show-full-screen: 583
+width if not $slide.show-full-screen: 1108
+height if  $slide.show-full-screen:  970
+width if $slide.show-full-screen: 1674
+top: -97
+top if $slide.show-full-screen: -1
+left: -104
+z-index: 0
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $is-mobile
+anchor: parent
+background-color: $fpm.color.main.custom.one
+height if not $slide.show-full-screen: 500
+width if not $slide.show-full-screen: 777
+height if  $slide.show-full-screen:  500
+width if $slide.show-full-screen: 973
+top: -25
+top if $slide.show-full-screen: 4
+left: -106
+left if not $slide.show-full-screen: -7
+z-index: 0
+
+
+--- container: ftd.main
+
+--- ftd.column:
+width: fill
+id: description
+align if $move-center: center
+padding-top if not $move-center: 64
+z-index: 1000
+
+--- ftd.column:
+width: fill
+align: center
+max-width: 1200
+
+
+--- ftd.column:
+align: center
+spacing: 32
+id: change
+
+--- ftd.row:
+width: 204
+height: 8
+background-color: $fpm.color.main.background.step-1
+
+--- container: change
+
+--- ftd.text: $title
+role: $fpm.type.heading-hero
+color: $fpm.color.main.background.step-1
+width: fill
+
+
+
+
+
+
+
+
+
+
+-- ftd.column section-title-and-description:
+caption title:
+string subtitle:
+optional body body:
+optional ftd.image-src image:
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: true
+optional string font-size:
+optional integer number:
+if: $PARENT.current == $SIBLING-INDEX
+width: fill
+height: fill
+
+
+
+--- ftd.row:
+height: fill
+width: fill
+
+--- ftd.column:
+width: fill
+align if $move-center: center
+padding-top if not $move-center: 64
+
+--- ftd.row:
+width: fill
+id: description
+spacing: 36
+align: center
+max-width: 1200
+
+--- ftd.column:
+width: fill
+align: center
+id: one-column
+max-width: 1200
+
+--- ftd.row:
+width: fill
+id: border-container
+margin-bottom: 36
+
+--- ftd.row:
+width: 104
+height: 8
+background-color: $fpm.color.main.custom.three
+
+--- container: border-container
+
+--- ftd.row:
+width: 104
+height: 8
+background-color: $fpm.color.main.custom.one
+
+--- container: one-column
+
+
+--- ftd.text: $title
+role: $fpm.type.heading-hero
+color: $fpm.color.main.background.step-1
+width: fill
+
+--- ftd.text:
+text: $subtitle
+role: $fpm.type.heading-medium
+color: $fpm.color.main.background.step-1
+width: fill
+margin-top: $fpm.space.space-6
+
+--- container: description
+
+
+--- ftd.column:
+width: fill
+align: center
+id: left-container
+
+--- ftd.row:
+if: $body is not null
+
+--- ftd.text:
+if: $font-size == small
+text: $body
+color: $fpm.color.main.background.step-1
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+role: $fpm.type.fine-print
+
+--- ftd.text:
+if: $font-size == regular
+text: $body
+role: $fpm.type.copy-tight
+color: $fpm.color.main.background.step-1
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
+--- ftd.text:
+if: $font-size == medium
+text: $body
+role: $fpm.type.copy-large
+color: $fpm.color.main.background.step-1
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
+--- ftd.text:
+if: $font-size == large
+text: $body
+role: $fpm.type.label-big
+color: $fpm.color.main.background.step-1
+margin-top if $move-top is not null: $move-top
+margin-bottom if $move-bottom is not null: $move-bottom
+width: fill
+
+--- container: left-container
+
+--- ftd.image:
+if: $body is null
+src: $image
+width: fill
+height: fill
+
+
+
+
+
+
+
+
+
+
+-- ftd.column caption:
+caption title:
+optional ftd.image-src image:
+width: fill
+height: fill
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: true
+optional string font-size:
+optional integer number:
+if: $PARENT.current == $SIBLING-INDEX
+
+
+--- ftd.row:
+width: fill
+height: fill
+id: main
+
+--- ftd.column:
+if: $image is not null
+id: description
+align: center
+width: fill
+
+
+--- ftd.column:
+width: fill
+height: fill
+align: center
+max-width: 1200
+id: image-container
+
+--- ftd.column:
+width: fill
+height: auto
+align: left
+max-width: 740
+
+--- ftd.image:
+if: not $is-mobile
+src: $image
+width: fill
+max-width if not $slide.show-full-screen: 600
+max-width if $slide.show-full-screen: 800
+max-width if $is-mobile: 600
+height: auto
+
+--- container: image-container
+
+--- ftd.image:
+if: $is-mobile
+src: $image
+width: fill
+max-width: 600
+height: auto
+
+--- container: image-container
+
+--- ftd.text: $title
+role: $fpm.type.copy-large
+color: $fpm.color.main.background.step-1
+width: fill
+height: fill
+margin-top: 24
+
+--- container: main
+
+--- ftd.column:
+if: $image is null
+width: fill
+align: bottom
+
+--- ftd.row:
+id: description
+width: fill
+align: center
+max-width: 1200
+
+--- ftd.column:
+width: fill
+height: fill
+align: center
+max-width: 1200
+
+--- ftd.text: $title
+role: $fpm.type.copy-large
+color: $fpm.color.main.background.step-1
+width: fill
+height: fill
+align: center
+margin-bottom: 36
+
+
+
+
+
+
+
+
+
+
+-- ftd.column big-number:
+caption title:
+string subtitle:
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: true
+optional string font-size:
+optional integer number:
+if: $PARENT.current == $SIBLING-INDEX
+width: fill
+height: fill
+
+
+--- ftd.column:
+if: not $is-mobile
+anchor: parent
+background-color: $fpm.color.main.custom.three
+height if not $slide.show-full-screen: 583
+width if not $slide.show-full-screen: 1108
+height if  $slide.show-full-screen:  970
+width if $slide.show-full-screen: 1674
+top: -97
+top if $slide.show-full-screen: -1
+left: -104
+z-index: 0
+
+--- container: ftd.main
+
+--- ftd.column:
+if: $is-mobile
+anchor: parent
+background-color: $fpm.color.main.custom.three
+height if not $slide.show-full-screen: 500
+width if not $slide.show-full-screen: 777
+height if  $slide.show-full-screen:  500
+width if $slide.show-full-screen: 973
+top: -25
+top if $slide.show-full-screen: 4
+left: -106
+left if not $slide.show-full-screen: -7
+z-index: 0
+
+
+--- container: ftd.main
+
+--- ftd.row:
+height: fill
+width: fill
+z-index: 1000
+
+--- ftd.column:
+width: fill
+id: description
+align if $move-center: center
+padding-top if not $move-center: 64
+
+--- ftd.column:
+width: fill
+align: center
+spacing: 36
+max-width: 1200
+id: one-column
+
+
+--- ftd.column:
+align: center
+spacing: 32
+id: change
+
+--- ftd.row:
+width: 204
+height: 8
+background-color: $fpm.color.main.background.step-1
+
+--- container: change
+
+--- ftd.text: $title
+role: $fpm.type.heading-hero
+color: $fpm.color.main.background.step-1
+
+
+
+--- ftd.text:
+text: $subtitle
+role: $fpm.type.heading-medium
+color: $fpm.color.main.background.step-1
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.column blank:
+optional integer move-top:
+optional integer move-bottom:
+boolean move-center: false
+optional string font-size:
+optional integer number:
+if: $PARENT.current == $SIBLING-INDEX
+width: fill
+height: fill
+
+--- ftd.row:
+height: fill
+width: fill
+
+--- ftd.column:
+width: fill
+id: description
+align: center
+
+--- ftd.column:
+width: fill
+align: center
+spacing: 36
+max-width: 1200
+
+
+
+
+
+
+
+
