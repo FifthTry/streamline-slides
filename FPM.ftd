@@ -2,7 +2,7 @@
 
 -- fpm.package: fifthtry.github.io/streamline-slides
 zip: github.com/fifthtry/streamline-slides/archive/refs/heads/main.zip
-base: https://raw.githubusercontent.com/fifthtry/streamline-slides/main
+download-base-url: https://raw.githubusercontent.com/fifthtry/streamline-slides/main
 
 -- fpm.dependency: fifthtry.github.io/package-doc as pd
 -- fpm.dependency: fifthtry.github.io/slides as slides
@@ -14,3 +14,4 @@ base: https://raw.githubusercontent.com/fifthtry/streamline-slides/main
 -- fpm.auto-import: pd/typography as tf
 -- fpm.auto-import: pd/code-block as cb
 -- fpm.auto-import: pd/forest-theme as ft
+
