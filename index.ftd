@@ -26,66 +26,74 @@ lang: ftd
 \-- fpm.auto-import: slide
 
 -- pd.hidden-code: Basic usage example
- 
+
 \-- slide.presentation:
 embed: <boolean false(if full screen mode) - default true>
 
-\--- slides.title-slide: Regular font title of presentation
-title-font: regular
-sub-title-font: regular
-subtitle: Regular font sub-title
 
-\--- slides.section-header: Section header with regular font
-title-font: regular
+\--- slides.title-slide: Medium font title of presentation
+title-font: medium
+sub-title-font: medium
+subtitle: Medium font sub-title
 
-\--- slides.title-and-body: Slide title with regular font
-title-font: regular
-body-font: regular
+\--- slides.section-header: Section header with medium font
+title-font: medium
 
-Regular font size of body content
-1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+\--- slides.title-and-body: Slide title with medium font
+title-font: medium
+body-font: medium
 
-\--- slides.title-and-2-columns: Regular title of 2 columns slide
-title-font: regular
-body-font: regular
+Medium font size of body content
+1. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+2. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+3. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+\--- slides.title-and-2-columns: Medium title of 2 columns slide
+title-font: medium
+body-font: medium
 image: $assets.files.image-placeholder.png
 
-Regular size font body here...
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Medium size font body here...
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
-\--- slides.title-only: Slide title with regular font
-title-font: regular
+\--- slides.title-only: Slide title with medium font
+title-font: medium
 image: $assets.files.image-placeholder.png
 
-\--- slides.one-column-text: Slide title with regular font
-title-font: regular
-body-font: regular
+\--- slides.one-column-text: Slide title with medium font
+title-font: medium
+body-font:  medium
 image: $assets.files.image-placeholder.png
 
-Regular size font body here...
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Medium size font body here...
 
-\--- slides.main-point: Slide title with regular font
-title-font: regular
+1. Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
-\--- slides.section-title-and-description: Regular font section title
-title-font: regular
-sub-title-font: regular
-subtitle: Regular font sub title here
+\--- slides.main-point: Slide title with medium font
+title-font: medium
+
+\--- slides.section-title-and-description: Medium font section title
+title-font: medium
+sub-title-font: medium
+body-font: medium
+subtitle: Medium font sub title here
+
+Medium font body text.
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+\--- slides.caption: Medium font slide caption 
+body-font: medium
 image: $assets.files.image-placeholder.png
 
-\--- slides.caption: Regular font slide caption 
-body-font: regular
-image: $assets.files.image-placeholder.png
+\--- slides.big-number: Medium font big slide title
+title-font: medium
+sub-title-font: medium
+subtitle: Medium font slide sub title
 
-\--- slides.big-number: Regular font big slide title
-title-font: regular
-sub-title-font: regular
-subtitle: Regular font slide sub title
-
-\--- slides.centered: Centered slide with regular font 
-title-font: regular
-sub-title-font: regular
+\--- slides.centered: Centered slide with medium font 
+title-font: medium
+sub-title-font: medium
 subtitle: Large font slide sub title
 image: $assets.files.image-placeholder.png
 
@@ -93,56 +101,20 @@ Click on `full-screen` mode `squre` icon to see full-screen view. On `full-scree
 mode to navigate slides press `left` OR `right` arrow keys to move to left OR 
 right slide.
 
-\--- slides.blank:
-
-
-
-
-
-
--- tf.h2: Working demo:
-
-Press `CTRL+f` to see full screen mode. Press `left` / `right` arrow kyes to 
-navigate to left OR right slide
-
-
-
+\--- slides.blank: 
 
 
 
 
 -- streamline-presentation:
 
---- title-slide: Regular font title of presentation
-title-font: regular
-sub-title-font: regular
-subtitle: Regular font sub-title
-
 --- title-slide: Medium font title of presentation
 title-font: medium
 sub-title-font: medium
 subtitle: Medium font sub-title
 
---- title-slide: Large font title of presentation
-title-font: large
-sub-title-font: large
-subtitle: Large font sub-title
-
---- section-header: Section header with regular font
-title-font: regular
-
 --- section-header: Section header with medium font
 title-font: medium
-
---- section-header: Section header with large font
-title-font: large
-
---- title-and-body: Slide title with regular font
-title-font: regular
-body-font: regular
-
-Regular font size of body content
-1. Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 --- title-and-body: Slide title with medium font
 title-font: medium
@@ -153,21 +125,6 @@ Medium font size of body content
 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit
 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
---- title-and-body: Slide title with large font
-title-font: large
-body-font: large
-
-Large font size of body content
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit
-
---- title-and-2-columns: Regular title of 2 columns slide
-title-font: regular
-body-font: regular
-image: $assets.files.image-placeholder.png
-
-Regular size font body here...
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit
-
 --- title-and-2-columns: Medium title of 2 columns slide
 title-font: medium
 body-font: medium
@@ -176,43 +133,9 @@ image: $assets.files.image-placeholder.png
 Medium size font body here...
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
---- title-and-2-columns: Large title of 2 columns slide
-title-font: large
-body-font: large
-left-body: true
-image: $assets.files.image-placeholder.png
-
-Large size font body here...
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit
-
---- title-only: Slide title with regular font
-title-font: regular
-image: $assets.files.image-placeholder.png
-
 --- title-only: Slide title with medium font
 title-font: medium
 image: $assets.files.image-placeholder.png
-
---- title-only: Slide title with largest font
-title-font: large
-image: $assets.files.image-placeholder.png
-
---- one-column-text: Slide title with regular font
-title-font: regular
-body-font: regular
-image: $assets.files.image-placeholder.png
-
-Regular size font body here...
-
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit
-
---- one-column-text: Slide title with regular font
-title-font: regular
-body-font: regular
-
-Regular size font body here...
-
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 --- one-column-text: Slide title with medium font
 title-font: medium
@@ -223,41 +146,8 @@ Medium size font body here...
 
 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
---- one-column-text: Slide title with medium font
-title-font: medium
-body-font:  medium
-
-Medium size font body here...
-
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit
-
---- one-column-text: Slide title with large font
-title-font: large
-body-font:  large
-image: $assets.files.image-placeholder.png
-
-Large size font body here...
-
---- one-column-text: Slide title with large font
-title-font: large
-body-font:  large
-
-Large size font body here...
-
---- main-point: Slide title with regular font
-title-font: regular
-
 --- main-point: Slide title with medium font
 title-font: medium
-
---- main-point: Slide title with largestsd font
-title-font: large
-
---- section-title-and-description: Regular font section title
-title-font: regular
-sub-title-font: regular
-subtitle: Regular font sub title here
-image: $assets.files.image-placeholder.png
 
 --- section-title-and-description: Medium font section title
 title-font: medium
@@ -269,48 +159,14 @@ Medium font body text.
 
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit
 
---- section-title-and-description: Large font section title
-title-font: large
-sub-title-font: large
-subtitle: Large font sub title here
-image: $assets.files.image-placeholder.png
-
---- caption: Regular font slide caption 
-body-font: regular
-image: $assets.files.image-placeholder.png
-
---- caption: Regular font slide caption 
+--- caption: Medium font slide caption 
 body-font: medium
 image: $assets.files.image-placeholder.png
-
---- caption: Regular font slide caption 
-body-font: large
-image: $assets.files.image-placeholder.png
-
---- big-number: Regular font big slide title
-title-font: regular
-sub-title-font: regular
-subtitle: Regular font slide sub title
 
 --- big-number: Medium font big slide title
 title-font: medium
 sub-title-font: medium
 subtitle: Medium font slide sub title
-
---- big-number: Large font big slide title
-title-font: large
-sub-title-font: large
-subtitle: Large font slide sub title
-
---- centered: Centered slide with regular font 
-title-font: regular
-sub-title-font: regular
-subtitle: Large font slide sub title
-image: $assets.files.image-placeholder.png
-
-Click on `full-screen` mode `squre` icon to see full-screen view. On `full-screen`
-mode to navigate slides press `left` OR `right` arrow keys to move to left OR 
-right slide.
 
 --- centered: Centered slide with medium font 
 title-font: medium
@@ -322,18 +178,97 @@ Click on `full-screen` mode `squre` icon to see full-screen view. On `full-scree
 mode to navigate slides press `left` OR `right` arrow keys to move to left OR 
 right slide.
 
---- centered: Centered slide with large font 
-title-font: large
-sub-title-font: large
-subtitle: Large font slide sub title
-image: $assets.files.image-placeholder.png
+--- blank: 
+
+-- container: page
+
+-- ftd.column:
+margin-top: $fpm.space.space-5
+
+-- tf.markdown:
 
 Click on `full-screen` mode `squre` icon to see full-screen view. On `full-screen`
 mode to navigate slides press `left` OR `right` arrow keys to move to left OR 
 right slide. 
 
---- blank: 
+Press `esc` key to exit full screen view.
 
+-- container: page
+
+
+-- streamline-presentation:
+
+--- title-slide: Medium font title of presentation
+title-font: medium
+sub-title-font: medium
+subtitle: Medium font sub-title
+
+--- section-header: Section header with medium font
+title-font: medium
+
+--- title-and-body: Slide title with medium font
+title-font: medium
+body-font: medium
+
+Medium font size of body content
+1. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+2. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+3. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+--- title-and-2-columns: Medium title of 2 columns slide
+title-font: medium
+body-font: medium
+image: $assets.files.image-placeholder.png
+
+Medium size font body here...
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+--- title-only: Slide title with medium font
+title-font: medium
+image: $assets.files.image-placeholder.png
+
+--- one-column-text: Slide title with medium font
+title-font: medium
+body-font:  medium
+image: $assets.files.image-placeholder.png
+
+Medium size font body here...
+
+1. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+--- main-point: Slide title with medium font
+title-font: medium
+
+--- section-title-and-description: Medium font section title
+title-font: medium
+sub-title-font: medium
+body-font: medium
+subtitle: Medium font sub title here
+
+Medium font body text.
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+--- caption: Medium font slide caption 
+body-font: medium
+image: $assets.files.image-placeholder.png
+
+--- big-number: Medium font big slide title
+title-font: medium
+sub-title-font: medium
+subtitle: Medium font slide sub title
+
+--- centered: Centered slide with medium font 
+title-font: medium
+sub-title-font: medium
+subtitle: Large font slide sub title
+image: $assets.files.image-placeholder.png
+
+Click on `full-screen` mode `squre` icon to see full-screen view. On `full-screen`
+mode to navigate slides press `left` OR `right` arrow keys to move to left OR 
+right slide.
+
+--- blank: 
 
 
 
